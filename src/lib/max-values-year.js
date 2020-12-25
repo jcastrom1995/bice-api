@@ -1,5 +1,26 @@
 import moment from 'moment'
 
+const spanishMonths = [
+  'Enero',
+  'Febrero',
+  'Marzo',
+  'Abril',
+  'Mayo',
+  'Junio',
+  'Julio',
+  'Agosto',
+  'Septiembre',
+  'Octubre',
+  'Noviembre',
+  'Diciembre'
+]
+
+/**
+ * Return a max values per year.
+ * @param {number} year - The year of the period
+ * @param {object} object - The values per indicators.
+ * @return {{months: String[], values: Number[]}}
+ */
 export default function getMaxValuesPerYear(year, object) {
   const months = []
   const valuePerMonths = []
@@ -8,7 +29,7 @@ export default function getMaxValuesPerYear(year, object) {
     if (year !== getYear(property)) {
       continue
     }
-    if (!months.length  && !valuePerMonths.length) {
+    if (!months.length && !valuePerMonths.length) {
       months.push(getMonth(property))
       valuePerMonths.push(object[property])
     }
@@ -22,15 +43,23 @@ export default function getMaxValuesPerYear(year, object) {
     }
   }
   return {
-    months,
+    months: months.map((month, index) => spanishMonths[index]),
     values: valuePerMonths
   }
 }
 
+/**
+ * Return the month by unix.
+ * @param {number} unix - The date in unix format
+ */
 function getMonth(unix) {
   return Number(moment.unix(unix).format('M'))
 }
 
+/**
+ * Return the year by unix.
+ * @param {number} unix - The date in unix format
+ */
 function getYear(unix) {
   return Number(moment.unix(unix).format('yyyy'))
 }
