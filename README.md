@@ -1,6 +1,6 @@
 # BICE-API
 
-##### Tecnologías ocupadas
+Tecnologías ocupadas
 
 - NodeJS
 - ExpressJS
@@ -12,7 +12,7 @@ Intalación de los paquetes que contiene la aplicación
 
 `$ npm install`
 
-Creación de archivo de variables en la raiz del proyecto con nombre **.env**
+Creación de archivo de variables en la raiz del proyecto con nombre **.env**, posterior a la creación pegar en el las siguientes variables.
 
 ```
 PORT="4000"
