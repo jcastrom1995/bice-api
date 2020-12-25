@@ -1,4 +1,4 @@
-export default (req, res, next) => {
+export const accessControlMiddleware = (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
   res.setHeader(
