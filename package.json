@@ -2,9 +2,11 @@
   "name": "bice-api",
   "version": "1.0.0",
   "description": "Application to obtain financial information",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --exec babel-node src/app.js --source-maps",
+    "build": "babel src --out-dir dist",
+    "start": "node ./dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,12 @@
     "babel-plugin-source-map-support": "^2.0.1",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-prettier": "^3.1.0"
+    "eslint-plugin-prettier": "^3.1.0",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
   }
 }
