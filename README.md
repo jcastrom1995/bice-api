@@ -14,8 +14,10 @@
 
 ##### Creación de archivo de variables en la raiz del proyecto con nombre **.env**
 
-`PORT="4000"`
-`URL_API="https://indecon.online/"`
+```
+PORT="4000"
+URL_API="https://indecon.online/"
+```
 
 ##### Ejecución de aplicación
 
