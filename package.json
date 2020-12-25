@@ -15,5 +15,19 @@
   "bugs": {
     "url": "https://github.com/jcastrom1995/bice-api/issues"
   },
-  "homepage": "https://github.com/jcastrom1995/bice-api#readme"
+  "homepage": "https://github.com/jcastrom1995/bice-api#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.0-beta.6",
+    "babel-plugin-source-map-support": "^2.0.1",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0"
+  }
 }

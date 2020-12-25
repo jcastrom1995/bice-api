@@ -1,0 +1,10 @@
+{
+  "sourceMaps": "inline",
+  "retainLines": true,
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+      ["@babel/plugin-proposal-decorators", { "legacy": true }],
+      ["@babel/plugin-proposal-class-properties", { "loose": true }],
+      ["source-map-support"]
+  ]
+}
