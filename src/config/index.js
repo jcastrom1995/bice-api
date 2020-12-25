@@ -1,8 +1,8 @@
 import dotenv from 'dotenv'
 
-dotenv.config({path: '.env'})
+dotenv.config({ path: '.env' })
 
 export default {
-    urlApi: process.env.URL_API,
-    port: process.env.PORT
+  urlApi: process.env.URL_API,
+  port: process.env.PORT
 }
