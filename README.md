@@ -12,7 +12,7 @@ Intalación de los paquetes que contiene la aplicación
 
 `$ npm install`
 
-Crear archivo de variables en la raiz del proyecto con nombre **.env**
+Crear archivo de variables en la raíz del proyecto con nombre **.env**
 
 Posterior a la creación pegar en el las siguientes variables.
 

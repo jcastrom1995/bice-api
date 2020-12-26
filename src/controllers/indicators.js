@@ -2,7 +2,7 @@ import * as indicatorModel from '../models/indicators'
 
 export const indicator = (req, res, next) => {
   indicatorModel
-    .getIndicators(req.params.key, req.body.year)
+    .getIndicators(req.params.key, Number(req.query.year))
     .then((data) => {
       res.json({
         status: 200,
