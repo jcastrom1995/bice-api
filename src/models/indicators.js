@@ -8,7 +8,7 @@ import getMaxValuesPerYear from '../lib/max-values-year'
  * @param {number} year - The year who i want show.
  * @return {{name: String, unit: String, information: {months: String[], values: Number[]}}}
  */
-export const getIndicators = (indicator, year) => {
+export const getIndicator = (indicator, year) => {
   return axios
     .get(`${config.urlApi}/values/${indicator}`)
     .then(({ data }) => {
@@ -21,4 +21,8 @@ export const getIndicators = (indicator, year) => {
       }
     })
     .catch((err) => console.error(err))
+}
+
+export const getIndicators = () => {
+  return axios.get(`${config.urlApi}/last`)
 }
