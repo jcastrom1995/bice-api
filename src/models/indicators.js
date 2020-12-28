@@ -10,7 +10,7 @@ import getMaxValuesPerYear from '../lib/max-values-year'
  */
 export const getIndicator = (indicator, year) => {
   return axios
-    .get(`${config.urlApi}/values/${indicator}`)
+    .get(`${config.urlApi}values/${indicator}`)
     .then(({ data }) => {
       const information = getMaxValuesPerYear(year, data.values)
       return {
@@ -24,5 +24,5 @@ export const getIndicator = (indicator, year) => {
 }
 
 export const getIndicators = () => {
-  return axios.get(`${config.urlApi}/last`)
+  return axios.get(`${config.urlApi}last`)
 }
